@@ -1,0 +1,24 @@
+/* Ensure the dropdowns are hidden by default */
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Show the dropdown when hovering */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optionally, add a transition for smooth hover effect */
+  .nav-item.dropdown .dropdown-menu {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+  }
+  

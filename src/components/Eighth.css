@@ -1,0 +1,71 @@
+.zoom-target {
+    opacity: 0;
+    transform: scale(1.5);
+    transition: transform 1s ease, opacity 0.5s ease;
+  }
+  
+  .zoom-target.zoom-out {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+
+  .word-cloud {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .word {
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #060000;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .word.yoga {
+    font-style: italic;
+    color: #080503;
+  }
+  
+  .word.relax {
+    font-size: 2rem;
+    color: #01110f;
+  }
+  
+  .word.peace {
+    text-transform: uppercase;
+    color: #070200;
+  }
+  
+  .word.healthy {
+    font-family: "Courier New", Courier, monospace;
+    color: #080a0a;
+  }
+  
+  .word.paradise {
+    text-shadow: 2px 2px #080703;
+  }
+  
+  .word.wellness {
+    font-variant: small-caps;
+    color: #070b0a;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
