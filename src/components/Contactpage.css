@@ -1,0 +1,82 @@
+.yoga-session-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f8f5;
+  }
+  
+  .form-container {
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .info-container {
+    width: 45%;
+    position: relative;
+  }
+  
+  .info-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .info-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 128, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  input {
+    border: none; /* Remove all borders */
+    border-bottom: 2px solid #ccc; /* Add a bottom border */
+    border-radius: 0; /* Ensure no rounded corners */
+    outline: none; /* Remove focus outline */
+    padding: 5px; /* Optional: Adjust padding for better spacing */
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #4caf50; /* Optional: Change bottom border color on focus */
+  }
+  

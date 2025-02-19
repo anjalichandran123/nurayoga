@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faLinkedinIn, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 function Tenth() {
   const iconStyle = {
@@ -33,7 +34,7 @@ function Tenth() {
   };
 
   return (
-    <div className="container-fluid mt-5">
+    <div className="container-fluid bg-white">
       <div style={containerStyle}>
         {/* Column 1: About Section */}
         <div style={columnStyle}>
@@ -69,12 +70,12 @@ function Tenth() {
           </p>
           <p className="text-gray-500 text-sm mt-4">&copy; 2023 PBM Infotech</p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-500 hover:text-black">
+            <Link href="#" className="text-gray-500 hover:text-black">
               Terms and Conditions
-            </a>
-            <a href="#" className="text-gray-500 hover:text-black">
+            </Link>
+            <Link href="#" className="text-gray-500 hover:text-black">
             Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -215,47 +215,8 @@ function Header() {
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
-                    <Link
-                      class="nav-link dropdown-toggle"
-                      id="navbarDropdownBlog"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
-                    >
-                      Blog
-                    </Link>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdownBlog"
-                    >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Blog 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Blog 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Blog 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Blog 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Blog 5
-                        </Link>
-                      </li>
-                    </ul>
+                  <li>
+                  <Link href="cheader.js" style={{textDecoration:"none",color:"black",paddingTop:"450px"}}>Contact</Link>
                   </li>
                 </ul>
                 <div
