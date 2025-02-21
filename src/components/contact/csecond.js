@@ -1,4 +1,5 @@
 import React from "react";
+import './Contactpage.css';
 
 const ContactPage = () => {
   return (
@@ -111,7 +112,12 @@ const ContactPage = () => {
               height:"490px"
             }}
           >
-            <img src="pic.jpg" style={{height:"260px",width:"500px"}} />
+            <img 
+  src="pic.jpg" 
+  alt="" 
+  style={{ height: "260px", width: "500px" }} 
+/>
+
             
             <h3 className="fw-bold mt-3">
               Relax body & mind for visit our yoga session!!

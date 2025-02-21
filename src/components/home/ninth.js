@@ -46,15 +46,16 @@ function ImageRow() {
             <div className="card border-0 shadow-sm" style={{borderRadius:"50px"}}>
               {/* Image Section */}
               <img
-                src={data.imgSrc}
-                className="img-thumbnail"
-                alt={`Image ${index + 1}`}
-                style={{
-                  borderRadius: "30px",
-                  height: "200px",
-                  objectFit: "cover",
-                }}
-              />
+  src={data.imgSrc}
+  className="img-thumbnail"
+  alt={`Item ${index + 1}`}
+  style={{
+    borderRadius: "30px",
+    height: "200px",
+    objectFit: "cover",
+  }}
+/>
+
 
               {/* Text Section */}
               <div className="p-3">

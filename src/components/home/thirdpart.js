@@ -29,13 +29,15 @@ const MeditationPractice = () => {
       overflowY: 'auto',
       paddingRight: '20px',
       scrollBehavior: 'smooth',
-      '&::-webkit-scrollbar': {
+    },
+    scrollbar: {
+      WebkitScrollbar: {
         width: '6px',
       },
-      '&::-webkit-scrollbar-track': {
+      WebkitScrollbarTrack: {
         background: '#f1f1f1',
       },
-      '&::-webkit-scrollbar-thumb': {
+      WebkitScrollbarThumb: {
         background: '#888',
         borderRadius: '3px',
       },
@@ -74,7 +76,22 @@ const MeditationPractice = () => {
       width: '60%',
       borderRadius: '15px',
       marginTop: '30px',
-    }
+    },
+    responsiveContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '20px',
+    },
+    responsiveRightColumn: {
+      paddingRight: '0',
+    },
+    responsiveBenefitsList: {
+      gridTemplateColumns: '1fr',
+    },
+    responsiveGroupImage: {
+      width: '100%',
+    },
   };
 
   const benefits = [
@@ -101,7 +118,11 @@ const MeditationPractice = () => {
   );
 
   return (
-    <div class="mt-5" style={styles.container}>
+    <div 
+      className="mt-5" 
+      style={styles.container} 
+      id="meditation-container"
+    >
       <div style={styles.leftColumn}>
         <img 
           src="pic.jpg"
@@ -133,6 +154,34 @@ const MeditationPractice = () => {
           style={styles.groupImage}
         />
       </div>
+
+      <style>
+        {`
+          @media (max-width: 768px) {
+            #meditation-container {
+              display: flex;
+              flex-direction: column;
+              height: auto;
+              padding: 20px;
+            }
+
+            #meditation-container div {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+
+            .left-column img {
+              border-radius: 15px;
+              width: 100%;
+              height: auto;
+            }
+
+            .benefits-list {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

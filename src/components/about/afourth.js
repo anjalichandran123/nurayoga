@@ -4,7 +4,7 @@ import { ArrowRight } from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './about_YogaServices.css';
 
-const About_YogaServices = () => {
+const AboutYogaServices = () => {
   // Default image and state to track which service is hovered
   const [activeService, setActiveService] = useState('ardha');
   
@@ -88,4 +88,4 @@ const About_YogaServices = () => {
   );
 };
 
-export default About_YogaServices;
+export default AboutYogaServices;

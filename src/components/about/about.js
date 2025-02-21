@@ -1,19 +1,18 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import './Header.css';
+import "./Header.css";
 
-function About() {
+function Cheader() {
   return (
-    <div class="container-fluid mt-5" style={{ borderRadius: "300px" }}>
-
+    <div class="container-fluid" style={{ borderRadius: "300px" }}>
       {/* <!--carousal start--> */}
 
       <div
         id="carouselExampleCaptions"
         class="carousel slide"
         data-bs-ride="carousel"
-        style={{ height: "730px", borderRadius: "100px" }}
+        style={{ height: "650px", borderRadius: "100px" }}
       >
         <div class="carousel-indicators">
           {/* <!-- Navbar start --> */}
@@ -22,7 +21,7 @@ function About() {
               <Link
                 class="navbar-brand fw-bold fs-3"
                 href="#"
-                style={{ paddingBottom: "600px", paddingLeft: "500px" }}
+                style={{ paddingBottom: "550px", paddingLeft: "500px" }}
               >
                 Yoge
               </Link>
@@ -43,53 +42,25 @@ function About() {
                 style={{
                   paddingRight: "850px",
                   gap: "80px",
-                  paddingBottom: "650px",
+                  paddingBottom: "550px",
                 }}
               >
                 <ul
                   class="navbar-nav ms-auto fw-bold"
                   style={{ gap: "30px", paddingLeft: "300px" }}
                 >
-                  <li class="nav-item dropdown">
-                    <Link
-                      class="nav-link dropdown-toggle"
-                      role="button"
-                      id="navbarDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
-                    >
-                      Home
-                    </Link>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          {" "}
-                          Home 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 5
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
+                  <li className="nav-item">
+                                  <Link
+                                    to="/"
+                                    className="nav-link"
+                                    style={{
+                                      textDecoration: "none",
+                                      color: "black",
+                                    }}
+                                  >
+                                    Home
+                                  </Link>
+                                </li>
                   <li class="nav-item dropdown">
                     <Link
                       class="nav-link dropdown-toggle"
@@ -174,50 +145,30 @@ function About() {
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
+                  <li className="nav-item">
                     <Link
-                      class="nav-link dropdown-toggle"
-                      id="navbarDropdownEvents"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
+                      to="/about"
+                      className="nav-link"
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                      }}
                     >
-                      Events
+                      About
                     </Link>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdownEvents"
-                    >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 5
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
-                  <li>
-                  <Link href="cheader.js" style={{textDecoration:"none",color:"black",paddingTop:"450px"}}>Contact</Link>
+                  {/* Contact Link */}
+                  <li className="nav-item">
+                    <Link
+                      to="/contact"
+                      className="nav-link"
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      Contact
+                    </Link>
                   </li>
                 </ul>
                 <div
@@ -243,13 +194,21 @@ function About() {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="pic.jpg" class="d-block w-100" alt="..."  style={{height:"600px",borderRadius:"50px"}}/>
+            <img
+              src="pic.jpg"
+              class="d-block w-100"
+              alt="..."
+              style={{ height: "600px", borderRadius: "50px" }}
+            />
             <div
               class="carousel-caption "
-              style={{ paddingRight: "700px", paddingBottom: "250px",fontSize:"50px" }}
+              style={{
+                paddingRight: "600px",
+                paddingBottom: "300px",
+                fontSize: "50px",
+              }}
             >
               <div className="text-center px-6 relative w-full h-screen bg-covertext-white">
-                
                 <h1
                   className=" font-bold leading-tight"
                   style={{ color: "black", fontSize: "70px" }}
@@ -262,9 +221,8 @@ function About() {
         </div>
       </div>
       {/* <!--carousel end--> */}
-      
     </div>
-  )
+  );
 }
 
-export default About
+export default Cheader;

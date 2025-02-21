@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import './Header.css';
-
-
+import "./Header.css";
 
 function Cheader() {
   return (
-    <div class="container-fluid mt-5" style={{ borderRadius: "300px" }}>
-
+    <div class="container-fluid" style={{ borderRadius: "300px" }}>
       {/* <!--carousal start--> */}
 
       <div
@@ -52,46 +49,18 @@ function Cheader() {
                   class="navbar-nav ms-auto fw-bold"
                   style={{ gap: "30px", paddingLeft: "300px" }}
                 >
-                  <li class="nav-item dropdown">
-                    <Link
-                      class="nav-link dropdown-toggle"
-                      role="button"
-                      id="navbarDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
-                    >
-                      Home
-                    </Link>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          {" "}
-                          Home 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Home 5
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
+                  <li className="nav-item">
+                                  <Link
+                                    to="/"
+                                    className="nav-link"
+                                    style={{
+                                      textDecoration: "none",
+                                      color: "black",
+                                    }}
+                                  >
+                                    Home
+                                  </Link>
+                                </li>
                   <li class="nav-item dropdown">
                     <Link
                       class="nav-link dropdown-toggle"
@@ -176,50 +145,30 @@ function Cheader() {
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
+                  <li className="nav-item">
                     <Link
-                      class="nav-link dropdown-toggle"
-                      id="navbarDropdownEvents"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
+                      to="/about"
+                      className="nav-link"
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                      }}
                     >
-                      Events
+                      About
                     </Link>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdownEvents"
-                    >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Event 5
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
-                  <li>
-                  <Link href="cheader.js" style={{textDecoration:"none",color:"black",paddingTop:"350px"}}>Contact</Link>
+                  {/* Contact Link */}
+                  <li className="nav-item">
+                    <Link
+                      to="/contact"
+                      className="nav-link"
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      Contact
+                    </Link>
                   </li>
                 </ul>
                 <div
@@ -245,13 +194,21 @@ function Cheader() {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="pic.jpg" class="d-block w-100" alt="..."  style={{height:"600px",borderRadius:"50px"}}/>
+            <img
+              src="pic.jpg"
+              class="d-block w-100"
+              alt="..."
+              style={{ height: "600px", borderRadius: "50px" }}
+            />
             <div
               class="carousel-caption "
-              style={{ paddingRight: "600px", paddingBottom: "300px",fontSize:"50px" }}
+              style={{
+                paddingRight: "600px",
+                paddingBottom: "300px",
+                fontSize: "50px",
+              }}
             >
               <div className="text-center px-6 relative w-full h-screen bg-covertext-white">
-                
                 <h1
                   className=" font-bold leading-tight"
                   style={{ color: "black", fontSize: "70px" }}
@@ -264,7 +221,6 @@ function Cheader() {
         </div>
       </div>
       {/* <!--carousel end--> */}
-      
     </div>
   );
 }

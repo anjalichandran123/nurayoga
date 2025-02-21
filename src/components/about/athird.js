@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About_third = () => {
+const Aboutthird = () => {
   const styles = {
     container: {
       width: '100%',
@@ -78,4 +78,4 @@ const About_third = () => {
   );
 };
 
-export default About_third;
+export default Aboutthird;
