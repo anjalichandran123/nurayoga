@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Clock, Calendar } from "lucide-react";
 import '../../css/FourthPart.css';
 
+
 const WorkshopCard = ({ title, date }) => (
   <div className="workshop-card">
     <img src="pic.jpg" alt={title} />

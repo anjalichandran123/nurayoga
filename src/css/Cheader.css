@@ -1,0 +1,129 @@
+/* Base styles */
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    padding: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Dropdown styles */
+  .nav-item.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .nav-item.dropdown .dropdown-menu {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .responsive-div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .left-section,
+    .center-section,
+    .right-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .center-section {
+      text-align: center;
+    }
+  
+    .right-section {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .navbar-nav {
+      padding-left: 0 !important;
+    }
+  
+    .navbar-brand {
+      padding-left: 0 !important;
+    }
+  
+    .navbar-collapse {
+      padding-right: 0 !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      position: static;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .carousel-caption {
+      padding: 0 !important;
+    }
+  
+    .carousel-caption h1 {
+      font-size: 40px !important;
+    }
+  }
+  
+  /* Additional responsive improvements */
+  @media (max-width: 992px) {
+    .nav-link {
+      padding: 0.5rem 0;
+    }
+  
+    .dropdown-menu {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* Carousel styles */
+  .carousel-inner img {
+    object-fit: cover;
+  }
+  
+  /* Animation for dropdown */
+  .dropdown-menu {
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  }

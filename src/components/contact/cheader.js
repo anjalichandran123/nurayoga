@@ -1,32 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import "./Header.css";
+import '../../css/Cheader.css';
 
 function Cheader() {
   return (
-    <div class="container-fluid" style={{ borderRadius: "300px" }}>
-      {/* <!--carousal start--> */}
-
+    <div className="container-fluid" style={{ borderRadius: "300px" }}>
       <div
         id="carouselExampleCaptions"
-        class="carousel slide"
+        className="carousel slide"
         data-bs-ride="carousel"
         style={{ height: "650px", borderRadius: "100px" }}
       >
-        <div class="carousel-indicators">
-          {/* <!-- Navbar start --> */}
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <Link
-                class="navbar-brand fw-bold fs-3"
-                href="#"
-                style={{ paddingBottom: "550px", paddingLeft: "500px" }}
-              >
-                Yoge
-              </Link>
+        <div className="carousel-indicators">
+          {/* Navbar */}
+          <nav className="navbar navbar-expand-lg navbar-light responsive-div">
+            <div className="container-fluid">
+              {/* Logo Section */}
+              <div className="left-section">
+                <Link
+                  className="navbar-brand fw-bold fs-3"
+                  to="#"
+                  style={{ paddingBottom: "550px", paddingLeft: "500px" }}
+                >
+                  Yoge
+                </Link>
+              </div>
+
+              {/* Hamburger Menu for Mobile */}
               <button
-                class="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
@@ -34,10 +37,12 @@ function Cheader() {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
               </button>
+
+              {/* Navigation Items */}
               <div
-                class="collapse navbar-collapse"
+                className="collapse navbar-collapse center-section"
                 id="navbarNav"
                 style={{
                   paddingRight: "850px",
@@ -46,105 +51,76 @@ function Cheader() {
                 }}
               >
                 <ul
-                  class="navbar-nav ms-auto fw-bold"
+                  className="navbar-nav ms-auto fw-bold"
                   style={{ gap: "30px", paddingLeft: "300px" }}
                 >
+                  {/* Home Link */}
                   <li className="nav-item">
-                                  <Link
-                                    to="/"
-                                    className="nav-link"
-                                    style={{
-                                      textDecoration: "none",
-                                      color: "black",
-                                    }}
-                                  >
-                                    Home
-                                  </Link>
-                                </li>
-                  <li class="nav-item dropdown">
                     <Link
-                      class="nav-link dropdown-toggle"
+                      to="/"
+                      className="nav-link"
+                      style={{
+                        textDecoration: "none",
+                        color: "black",
+                      }}
+                    >
+                      Home
+                    </Link>
+                  </li>
+
+                  {/* Pages Dropdown */}
+                  <li className="nav-item dropdown">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      to="#"
                       id="navbarDropdownPages"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                      href="#"
                     >
                       Pages
                     </Link>
                     <ul
-                      class="dropdown-menu"
+                      className="dropdown-menu"
                       aria-labelledby="navbarDropdownPages"
                     >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 5
-                        </Link>
-                      </li>
+                      {[1, 2, 3, 4, 5].map((num) => (
+                        <li key={`page-${num}`}>
+                          <Link className="dropdown-item" to="#">
+                            Page {num}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
-                  <li class="nav-item dropdown">
+
+                  {/* Services Dropdown */}
+                  <li className="nav-item dropdown">
                     <Link
-                      class="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle"
+                      to="#"
                       id="navbarDropdownServices"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
-                      href="#"
                     >
                       Services
                     </Link>
                     <ul
-                      class="dropdown-menu"
+                      className="dropdown-menu"
                       aria-labelledby="navbarDropdownServices"
                     >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 5
-                        </Link>
-                      </li>
+                      {[1, 2, 3, 4, 5].map((num) => (
+                        <li key={`service-${num}`}>
+                          <Link className="dropdown-item" to="#">
+                            Service {num}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
+
+                  {/* About Link */}
                   <li className="nav-item">
                     <Link
                       to="/about"
@@ -157,6 +133,7 @@ function Cheader() {
                       About
                     </Link>
                   </li>
+
                   {/* Contact Link */}
                   <li className="nav-item">
                     <Link
@@ -167,41 +144,44 @@ function Cheader() {
                         color: "black",
                       }}
                     >
-                      Contact
+                      Contacts
                     </Link>
                   </li>
                 </ul>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "40px",
-                    height: "40px",
-                    backgroundColor: "white", // Set background color (blue in this case)
-                    borderRadius: "50%", // Make the background round
-                    cursor: "pointer", // Change the cursor to indicate it's clickable
-                  }}
-                >
-                  <FaSearch style={{ color: "black", fontSize: "20px" }} />{" "}
-                  {/* Set the icon's color and size */}
+
+                {/* Search Icon Section */}
+                <div className="right-section">
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "white",
+                      borderRadius: "50%",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <FaSearch style={{ color: "black", fontSize: "20px" }} />
+                  </div>
                 </div>
               </div>
             </div>
           </nav>
-
-          <br></br>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+
+        {/* Carousel Content */}
+        <div className="carousel-inner">
+          <div className="carousel-item active">
             <img
               src="pic.jpg"
-              class="d-block"
+              className="d-block w-100"
               alt="..."
-              style={{ height: "650px",width:"1500px", borderRadius: "50px" }}
+              style={{ height: "600px", borderRadius: "50px" }}
             />
             <div
-              class="carousel-caption "
+              className="carousel-caption content-container"
               style={{
                 paddingRight: "600px",
                 paddingBottom: "300px",
@@ -210,7 +190,7 @@ function Cheader() {
             >
               <div className="text-center px-6 relative w-full h-screen bg-covertext-white">
                 <h1
-                  className=" font-bold leading-tight"
+                  className="font-bold leading-tight"
                   style={{ color: "black", fontSize: "70px" }}
                 >
                   Contact Us
@@ -220,9 +200,8 @@ function Cheader() {
           </div>
         </div>
       </div>
-      {/* <!--carousel end--> */}
     </div>
   );
 }
 
-export default Cheader;
+export default Cheader
