@@ -5,7 +5,7 @@ import "./Header.css";
 
 function Cheader() {
   return (
-    <div class="container-fluid" style={{ borderRadius: "300px" }}>
+    <div class="container-fluid" style={{ borderRadius: "300px" ,backgroundColor:"#e9edf5"}}>
       {/* <!--carousal start--> */}
 
       <div
@@ -196,9 +196,9 @@ function Cheader() {
           <div class="carousel-item active">
             <img
               src="pic.jpg"
-              class="d-block w-100"
+              class="d-block "
               alt="..."
-              style={{ height: "600px", borderRadius: "50px" }}
+              style={{ height: "650px",width:"1500px", borderRadius: "50px" }}
             />
             <div
               class="carousel-caption "

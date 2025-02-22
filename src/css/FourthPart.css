@@ -1,0 +1,189 @@
+/* Variables */
+:root {
+    --primary-color: #4A9078;
+    --header-bg: #22c55e;
+    --text-dark: #333;
+    --text-light: #666;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+    --border-radius: 30px;
+    --card-radius: 8px;
+  }
+  
+  /* Main Container */
+  .workshop-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  /* Header Styles */
+  .header-section {
+    position: relative;
+    
+    background-image: url('https://www.transparenttextures.com/patterns/circuit-board.png');
+    border-radius: var(--card-radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .upcoming-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-dark);
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow var(--transition-speed) ease;
+    cursor: pointer;
+  }
+  
+  .upcoming-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-content {
+    margin-top: 32px;
+    width: 100%;
+  }
+  
+  .header-content hr {
+    border: none;
+    border-top: 1px solid white;
+    width: 66%;
+    margin: 0;
+  }
+  
+  .header-content h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+  
+  /* Cards Container */
+  .cards-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 24px 0;
+    margin-top: 24px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .cards-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card-wrapper {
+    scroll-snap-align: center;
+  }
+  
+  /* Workshop Card */
+  .workshop-card {
+    min-width: 280px;
+    background: white;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .workshop-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .workshop-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-content h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+  }
+  
+  .card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .card-content h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 12px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .workshop-container {
+      width: 100%;
+      padding: 16px;
+      margin: 10px 0;
+      border-radius: calc(var(--border-radius) / 2);
+    }
+  
+    .header-section {
+      padding: 16px;
+    }
+  
+    .header-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .workshop-card {
+      min-width: 260px;
+    }
+  
+    .card-content {
+      padding: 12px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .workshop-card {
+      min-width: 320px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .header-content h1 {
+    font-size: 2.5rem;
+  }
+  }

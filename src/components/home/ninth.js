@@ -28,7 +28,7 @@ function ImageRow() {
     <div className="container mt-5">
       <div className="w-full bg-gray-100 p-6">
       <div className="mb-8"  style={{paddingRight:"1100px"}}>
-        <button className="px-4 py-2 rounded-full bg-white text-gray-800 text-sm font-medium border border-gray-200" style={{borderRadius:"300px"}}>
+        <button className="px-4 py-2 rounded-full bg-white text-gray-800 text-sm font-medium border border-gray-200" style={{borderRadius:"300px",color:"black"}}>
           OUR BLOGS
         </button>
       </div>

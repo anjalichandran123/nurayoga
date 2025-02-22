@@ -1,0 +1,136 @@
+/* Base styles */
+.container-fluid {
+    padding: 2rem;
+    background-color: #eef4f1;
+  }
+  
+  /* Contact button styles */
+  .contact-btn {
+    padding: 0.5rem 2rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  
+  /* Form container styles */
+  .form-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form input styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-bottom: 2px solid #4caf50;
+  }
+  
+  /* Yoga session container styles */
+  .yoga-session-container {
+    background-color: #4a9078;
+    border-radius: 30px;
+    padding: 1.5rem;
+    height: 100%;
+    position: relative;
+  }
+  
+  .yoga-session-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    .container-fluid {
+      padding: 1rem;
+    }
+  
+    h1 {
+      padding-right: 0 !important;
+      font-size: 2rem !important;
+    }
+  
+    p {
+      padding-right: 0 !important;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-md-7,
+    .col-md-5 {
+      width: 100% !important;
+      margin-bottom: 2rem;
+    }
+  
+    .yoga-session-container {
+      height: auto;
+      width: 100% !important;
+    }
+  
+    .yoga-session-img {
+      height: 200px !important;
+      width: 100% !important;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-btn {
+      padding-right: 2rem !important;
+    }
+  
+    .row > div {
+      padding: 0.5rem;
+    }
+  
+    .form-container {
+      padding: 1rem;
+    }
+  
+    .col-md-6 {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .container-fluid {
+      padding: 0.5rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem !important;
+    }
+  
+    .contact-btn {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .yoga-session-container {
+    padding: 1rem;
+  }
+  }

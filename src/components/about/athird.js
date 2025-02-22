@@ -64,7 +64,7 @@ const Aboutthird = () => {
   );
 
   return (
-    <div class="mt-2" style={styles.container}>
+    <div class="mt-2" style={styles.container} >
       <style>{keyframes}</style>
       <div style={styles.scrollingWrapper}>
         {/* Duplicate content for seamless loop */}

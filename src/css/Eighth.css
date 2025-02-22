@@ -1,0 +1,277 @@
+/* Base styles */
+.banner-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Left Section Styles */
+  .left-section {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    width: 40%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  
+  .left-section.visible {
+    opacity: 1;
+  }
+  
+  .choose-button {
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  .main-heading {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin: 20px 0;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    max-width: 90%;
+  }
+  
+  .read-more-button {
+    background-color: #fac241;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .read-more-button:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Right Section Styles */
+  .right-section {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: white;
+    width: 40%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  
+  .right-section.visible {
+    opacity: 1;
+  }
+  
+  .stat-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .stat-circle {
+    width: 100px;
+    height: 100px;
+    min-width: 100px; /* Prevent shrinking */
+    background-color: #fac241;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .stat-info {
+    flex: 1;
+  }
+  
+  .stat-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 10px 0;
+  }
+  
+  /* Word Cloud */
+  .word-cloud {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 2;
+  }
+  
+  .floating-word {
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .floating-word:hover {
+    opacity: 1;
+  }
+  
+  /* Web Responsive Breakpoints */
+  @media screen and (min-width: 1400px) {
+    .left-section {
+      left: 10%;
+    }
+  
+    .right-section {
+      right: 10%;
+    }
+  
+    .main-heading {
+      font-size: 4rem;
+    }
+  
+    .description {
+      font-size: 1.2rem;
+    }
+  
+    .stat-circle {
+      width: 120px;
+      height: 120px;
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .left-section,
+    .right-section {
+      width: 45%;
+    }
+  
+    .main-heading {
+      font-size: 3rem;
+    }
+  
+    .stat-circle {
+      width: 90px;
+      height: 90px;
+      min-width: 90px;
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .banner-section {
+      height: auto;
+      min-height: 100vh;
+    }
+  
+    .left-section,
+    .right-section {
+      position: relative;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: auto;
+      margin: 40px 0;
+    }
+  
+    .main-heading {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    .description {
+      text-align: center;
+      margin: 20px auto;
+    }
+  
+    .choose-button {
+      display: block;
+      margin: 0 auto 20px;
+      text-align: center;
+    }
+  
+    .read-more-button {
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .stat-card {
+      justify-content: center;
+    }
+  
+    .word-cloud {
+      display: none;
+    }
+  }
+  
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .banner-section {
+      height: auto;
+    }
+  
+    .left-section,
+    .right-section {
+      width: 100%;
+      padding: 20px;
+      margin: 20px 0;
+    }
+  
+    .main-heading {
+      font-size: 2rem;
+    }
+  
+    .stat-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .stat-circle {
+      margin: 0 auto 20px;
+    }
+  
+    .stat-info {
+    text-align: center;
+  }
+  }

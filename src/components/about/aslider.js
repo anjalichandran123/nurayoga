@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
+import '../../css/TestimonialSlider.css';
 
 const testimonials = [
   {
@@ -50,93 +51,64 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-xl mx-auto container mt-5">
-      <div
-        className="bg-white rounded-lg overflow-hidden row"
-        style={{ height: "600px", borderRadius: "50px" }}
-      >
+    <div className="testimonial-container">
+      <div className="testimonial-card">
         {/* Image Section */}
-        <div
-          className=" col-6 relative h-[400px] w-full"
-          style={{ paddingLeft: ".5px", backgroundColor: "#E5C466" }}
-        >
+        <div className="image-section">
           <img
             src="pic.jpg"
             alt="Yoga pose"
-            className=" object-cover"
-            style={{ height: "600px", width: "650px", borderRadius: "50px" }}
+            className="testimonial-image"
           />
         </div>
 
         {/* Testimonial Section */}
-        <div
-          className="col-6 p-8 bg-amber-200"
-          style={{ backgroundColor: "#E5C466" }}
-        >
-          <div className="mb-4 mt-5" style={{ paddingRight: "430px" }}>
-            <span
-              className="inline-block px-4 py-1 bg-white rounded-full text-sm font-semibold"
-              style={{ borderRadius: "30px" }}
-            >
+        <div className="content-section">
+          <div className="badge-container">
+            <span className="testimonial-badge">
               TESTIMONIAL
             </span>
           </div>
-          <hr style={{ color: "white", borderWidth: "2px" }}></hr>
-          <h2
-            className="text-5xl font-bold mb-6"
-            style={{ color: "white", fontSize: "50px", paddingRight: "200px" }}
-          >
+          <hr className="divider" />
+          <h2 className="section-title">
             Clients feedback
           </h2>
 
-          <div className="relative">
-            <div className="transition-all duration-500 ease-in-out mt-5">
-              <div className="flex mb-3">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-amber-400 text-amber-400"
-                    style={{ color: "white" }}
-                  />
-                ))}
-              </div>
+          <div className="testimonial-content">
+            <div className="testimonial-rating">
+              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="star-icon"
+                />
+              ))}
+            </div>
 
-              <p className="text-lg mb-4" style={{ fontSize: "25px" }}>
-                {testimonials[currentIndex].text}
-              </p>
-              <div className="row">
-                <div className="flex items-center gap-3">
-                  <img
-                    src={testimonials[currentIndex].avatar}
-                    alt={testimonials[currentIndex].name}
-                    className="w-12 h-12 rounded-full"
-                    style={{
-                      height: "60px",
-                      width: "60px",
-                      borderRadius: "50px",
-                    }}
-                  />
-                  <div>
-                    <h4 className="font-semibold">
-                      {testimonials[currentIndex].name}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {testimonials[currentIndex].role}
-                    </p>
-                  </div>
+            <p className="testimonial-text">
+              {testimonials[currentIndex].text}
+            </p>
+            
+            <div className="profile-section">
+              <div className="profile-container">
+                <img
+                  src={testimonials[currentIndex].avatar}
+                  alt={testimonials[currentIndex].name}
+                  className="profile-image"
+                />
+                <div className="profile-info">
+                  <h4 className="profile-name">{testimonials[currentIndex].name}</h4>
+                  <p className="profile-role">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex gap-2 mt-6">
+          <div className="navigation-dots">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex ? "bg-teal-600 w-6" : "bg-teal-200"
-                }`}
+                className={`dot ${index === currentIndex ? "active" : ""}`}
               />
             ))}
           </div>

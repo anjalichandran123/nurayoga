@@ -4,6 +4,7 @@ import { ArrowRight } from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './about_YogaServices.css';
 
+
 const AboutYogaServices = () => {
   // Default image and state to track which service is hovered
   const [activeService, setActiveService] = useState('ardha');
@@ -35,7 +36,7 @@ const AboutYogaServices = () => {
   ];
 
   return (
-    <Container fluid className="yoga-services-container-fluid mt-5">
+    <Container fluid className="yoga-services-container-fluid mt-5" >
       <div className="service-badge">OUR SERVICES</div>
       <hr></hr>
       <Row className="header-row">
