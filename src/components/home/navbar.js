@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import "../../css/Navbar.css";
 
 function Navbar() {
   return (
     <div className="container-fluid">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-          {/* Brand Name */}
-          <h2 href="#" style={{ paddingLeft: "100px" }}>Yoge</h2>
+          <h2 className="brand-name">Yoge</h2>
 
-          {/* Mobile Menu Toggle Button */}
           <button
             className="navbar-toggler"
             type="button"
@@ -23,27 +22,14 @@ function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Navbar Links */}
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul
-              className="navbar-nav ms-auto fw-bold"
-              style={{ paddingRight: "100px", display: "flex", alignItems: "center", gap: "30px" }}
-            >
-              {/* Home Dropdown */}
+            <ul className="navbar-nav ms-auto fw-bold nav-links">
               <li className="nav-item">
-                <Link
-                  to="/"
-                  className="nav-link"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
+                <Link to="/" className="nav-link">
                   Home
                 </Link>
               </li>
 
-              {/* Pages Dropdown */}
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
@@ -64,7 +50,6 @@ function Navbar() {
                 </ul>
               </li>
 
-              {/* Services Dropdown */}
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
@@ -86,47 +71,20 @@ function Navbar() {
               </li>
 
               <li className="nav-item">
-                <Link
-                  to="/about"
-                  className="nav-link"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
+                <Link to="/about" className="nav-link">
                   About
                 </Link>
               </li>
 
-              {/* Contact Link */}
               <li className="nav-item">
-                <Link
-                  to="/contact"
-                  className="nav-link"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                >
+                <Link to="/contact" className="nav-link">
                   Contact
                 </Link>
               </li>
             </ul>
 
-            {/* Search Icon */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "40px",
-                height: "40px",
-                backgroundColor: "white",
-                borderRadius: "50%",
-                cursor: "pointer",
-              }}
-            >
-              <FaSearch style={{ color: "black", fontSize: "20px" }} />
+            <div className="search-icon">
+              <FaSearch />
             </div>
           </div>
         </div>

@@ -7,9 +7,9 @@ function HealthClubLandingPage() {
   return (
     <div className="landing-page container-fluid ms-0 ms-md-5 mt-5" style={{ backgroundColor: "#e9edf5" }}>
       <Container fluid className="p-0 position-relative">
-        <div className="hero-section">
-          <Row className="g-0 flex-column-reverse flex-md-row">
-            <Col md={6} className="hero-image-container">
+        <div className="hero-section" style={{ backgroundColor: "#e9edf5" }}>
+          <Row className="g-0 flex-column-reverse flex-md-row" >
+            <Col md={6} className="hero-image-container" >
               <img
                 src="pic.jpg"
                 alt="Person practicing yoga outdoors"

@@ -44,7 +44,7 @@ const Eighth = () => {
   const words = ["Yoga", "Relax", "Peace", "Healthy", "Paradise", "Wellness"];
 
   return (
-    <div className="banner-section">
+    <div className="banner-section container">
       <div className="banner-container">
         <img
           src="banner.jpg"

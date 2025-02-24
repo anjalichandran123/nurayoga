@@ -1,228 +1,157 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import "./Header.css";
+import "../../css/Cheader.css";
 
 function Cheader() {
   return (
-    <div class="container-fluid" style={{ borderRadius: "300px" ,backgroundColor:"#e9edf5"}}>
-      {/* <!--carousal start--> */}
-
+    <div className="container-fluid p-0">
       <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        style={{ height: "650px", borderRadius: "100px" }}
+        className="position-relative"
+        style={{ borderRadius: "50px", overflow: "hidden" }}
       >
-        <div class="carousel-indicators">
-          {/* <!-- Navbar start --> */}
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <Link
-                class="navbar-brand fw-bold fs-3"
-                href="#"
-                style={{ paddingBottom: "550px", paddingLeft: "500px" }}
+        {/* Hero Image */}
+        <div className="hero-image" style={{ height: "600px" }}>
+          <img
+            src="pic.jpg"
+            className="w-100 h-100"
+            alt="Hero"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+
+        {/* Navigation Bar */}
+        <nav className="navbar navbar-expand-lg navbar-light position-absolute w-100 top-0 py-4">
+          <div className="container-fluid px-5" style={{backgroundColor:" transparent"}}>
+            {/* Logo */}
+            <Link className="navbar-brand fw-bold fs-3" to="#">
+              Yoge
+            </Link>
+
+            {/* Hamburger Menu */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {/* Navigation Items */}
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul
+                className="navbar-nav mx-auto fw-bold"
+                style={{ gap: "2rem" }}
               >
-                Yoge
-              </Link>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                <li className="nav-item">
+                  <Link to="/" className="nav-link text-black">
+                    Home
+                  </Link>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle text-black"
+                    to="#"
+                    id="navbarDropdownPages"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Pages
+                  </Link>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdownPages"
+                  >
+                    {[1, 2, 3, 4, 5].map((num) => (
+                      <li key={`page-${num}`}>
+                        <Link className="dropdown-item" to="#">
+                          Page {num}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle text-black"
+                    to="#"
+                    id="navbarDropdownServices"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </Link>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdownServices"
+                  >
+                    {[1, 2, 3, 4, 5].map((num) => (
+                      <li key={`service-${num}`}>
+                        <Link className="dropdown-item" to="#">
+                          Service {num}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+
+                <li className="nav-item">
+                  <Link to="/about" className="nav-link text-black">
+                    About
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link to="/contact" className="nav-link text-black">
+                    Contacts
+                  </Link>
+                </li>
+              </ul>
+
+              {/* Search Icon */}
               <div
-                class="collapse navbar-collapse"
-                id="navbarNav"
+                className="d-flex align-items-center justify-content-center"
                 style={{
-                  paddingRight: "850px",
-                  gap: "80px",
-                  paddingBottom: "550px",
+                  width: "40px",
+                  height: "40px",
+                  backgroundColor: "white",
+                  borderRadius: "50%",
+                  cursor: "pointer",
                 }}
               >
-                <ul
-                  class="navbar-nav ms-auto fw-bold"
-                  style={{ gap: "30px", paddingLeft: "300px" }}
-                >
-                  <li className="nav-item">
-                                  <Link
-                                    to="/"
-                                    className="nav-link"
-                                    style={{
-                                      textDecoration: "none",
-                                      color: "black",
-                                    }}
-                                  >
-                                    Home
-                                  </Link>
-                                </li>
-                  <li class="nav-item dropdown">
-                    <Link
-                      class="nav-link dropdown-toggle"
-                      id="navbarDropdownPages"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
-                    >
-                      Pages
-                    </Link>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdownPages"
-                    >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Page 5
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <Link
-                      class="nav-link dropdown-toggle"
-                      id="navbarDropdownServices"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      href="#"
-                    >
-                      Services
-                    </Link>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="navbarDropdownServices"
-                    >
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 1
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 2
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 3
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 4
-                        </Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">
-                          Service 5
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      to="/about"
-                      className="nav-link"
-                      style={{
-                        textDecoration: "none",
-                        color: "black",
-                      }}
-                    >
-                      About
-                    </Link>
-                  </li>
-                  {/* Contact Link */}
-                  <li className="nav-item">
-                    <Link
-                      to="/contact"
-                      className="nav-link"
-                      style={{
-                        textDecoration: "none",
-                        color: "black",
-                      }}
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "40px",
-                    height: "40px",
-                    backgroundColor: "white", // Set background color (blue in this case)
-                    borderRadius: "50%", // Make the background round
-                    cursor: "pointer", // Change the cursor to indicate it's clickable
-                  }}
-                >
-                  <FaSearch style={{ color: "black", fontSize: "20px" }} />{" "}
-                  {/* Set the icon's color and size */}
-                </div>
-              </div>
-            </div>
-          </nav>
-
-          <br></br>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="pic.jpg"
-              class="d-block "
-              alt="..."
-              style={{ height: "650px",width:"1500px", borderRadius: "50px" }}
-            />
-            <div
-              class="carousel-caption "
-              style={{
-                paddingRight: "600px",
-                paddingBottom: "300px",
-                fontSize: "50px",
-              }}
-            >
-              <div className="text-center px-6 relative w-full h-screen bg-covertext-white">
-                <h1
-                  className=" font-bold leading-tight"
-                  style={{ color: "black", fontSize: "70px" }}
-                >
-                  About Us
-                </h1>
+                <FaSearch className="text-black" style={{ fontSize: "20px" }} />
               </div>
             </div>
           </div>
+        </nav>
+
+        {/* Hero Content */}
+        <div
+          className="position-absolute top-50 start-0 translate-middle-y"
+          style={{ padding: "0 5rem" }}
+        >
+          <h1
+            className="font-bold"
+            style={{
+              color: "black",
+              fontSize: "70px",
+              lineHeight: "1.2",
+            }}
+          >
+            About Us
+          </h1>
         </div>
       </div>
-      {/* <!--carousel end--> */}
     </div>
   );
 }
 
-export default Cheader;
+export default Cheader;

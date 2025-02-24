@@ -3,7 +3,7 @@ import "../../css/Contactpage.css";
 
 const ContactPage = () => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{ backgroundColor: "#e9edf5" }}>
       {/* Contact Button */}
       <button className="btn btn-outline-dark rounded-pill contact-btn">
         CONTACT US
