@@ -1,0 +1,121 @@
+/* Main container */
+.yoga-gallery-container {
+  padding: 16px;
+  background-color: #e9edf5;
+  min-height: 100vh;
+}
+
+/* Gallery title */
+.yoga-gallery-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #0e0e0f;
+}
+
+/* Grid layout */
+.yoga-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+/* Card styles */
+.yoga-card {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.yoga-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.yoga-card-active {
+  transform: scale(0.95);
+  background-color: #eef2ff;
+}
+
+.yoga-card-inner {
+  height: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.yoga-card-image {
+  width: 100%;
+  height: 70%;
+  background-color: #e0e7ff;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.yoga-pose-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.yoga-card:hover .yoga-pose-img {
+  transform: scale(1.05);
+}
+
+.yoga-card-content {
+  text-align: center;
+}
+
+.yoga-card-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #03020b;
+  margin-bottom: 4px;
+}
+
+.yoga-card-sanskrit {
+  font-size: 0.875rem;
+  color: #03020d;
+  font-style: italic;
+}
+
+/* Media query for tablets and desktop */
+@media (min-width: 640px) {
+  .yoga-gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1720px) {
+  .yoga-card {
+    width: 100%;
+    height: 280px;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 639px) {
+  .yoga-card {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .yoga-gallery-grid {
+    gap: 16px;
+  }
+}

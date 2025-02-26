@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import "../../css/Cheader.css";
+import "../../css/Galleryheader.css";
 
-function Cheader() {
+function Galleryheader() {
   return (
     <div className="container-fluid p-0">
       <div
@@ -151,7 +151,7 @@ function Cheader() {
               lineHeight: "1.2",
             }}
           >
-            About Us
+            Gallery
           </h1>
         </div>
       </div>
@@ -159,4 +159,4 @@ function Cheader() {
   );
 }
 
-export default Cheader;
+export default Galleryheader;

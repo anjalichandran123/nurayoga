@@ -52,6 +52,11 @@ function Cheader() {
                     Home
                   </Link>
                 </li>
+                <li className="nav-item">
+                <Link to="/gallery" className="nav-link text-black">
+                  Gallery
+                </Link>
+              </li>
 
                 <li className="nav-item dropdown">
                   <Link

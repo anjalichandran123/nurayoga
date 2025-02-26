@@ -57,10 +57,10 @@ const Fourthpart = () => {
   }, [isMobile]);
 
   const workshopData = [
-    { title: "Web Development Basics", date: "08-11-2024" },
-    { title: "UI/UX Design Workshop", date: "08-11-2024" },
-    { title: "Mobile App Development", date: "08-11-2024" },
-    { title: "Data Science Fundamentals", date: "08-11-2024" }
+    { title: "Tadasana ", date: "08-11-2024" },
+    { title: "Vrikshasana ", date: "08-11-2024" },
+    { title: "Bhujangasana ", date: "08-11-2024" },
+    { title: "Adho Mukha Svanasana", date: "08-11-2024" }
   ];
 
   return (
